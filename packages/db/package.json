@@ -1,20 +1,17 @@
 {
-  "extends": "@workspace/typescript-config/react-library.json",
-  "compilerOptions": {
-    "forceConsistentCasingInFileNames": true,
-    "paths": {
-      "@workspace/ui/*": [
-        "./src/*"
-      ]
-    }
+  "name": "@workspace/db",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "include": [
-    "."
-  ],
-  "exclude": [
-    "node_modules",
-    "dist"
-  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "dependencies": {
     "dotenv": "^17.2.3",
     "drizzle-orm": "^0.44.6",
@@ -23,6 +20,8 @@
   "devDependencies": {
     "@types/pg": "^8.15.5",
     "drizzle-kit": "^0.31.5",
-    "tsx": "^4.20.6"
+    "tsx": "^4.20.6",
+    "@workspace/eslint-config": "workspace:*",
+    "@workspace/typescript-config": "workspace:*"
   }
 }

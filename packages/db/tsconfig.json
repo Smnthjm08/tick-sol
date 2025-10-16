@@ -2,11 +2,11 @@
   "extends": "@workspace/typescript-config/base.json",
   "compilerOptions": {
     "forceConsistentCasingInFileNames": true,
-    // "paths": {
-    //   "@workspace/ui/*": ["./src/*"]
-    // }
-    "rootDir": "src",
-    "outDir": "dist/"
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    // "rootDir": "src",
+    // "outDir": "dist/"
   },
   "include": ["."],
   "exclude": ["node_modules", "dist"]

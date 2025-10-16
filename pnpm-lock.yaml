@@ -38,6 +38,9 @@ importers:
       next-themes:
         specifier: ^0.4.6
         version: 0.4.6(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      pg:
+        specifier: ^8.16.3
+        version: 8.16.3
       react:
         specifier: ^19.1.1
         version: 19.1.1
@@ -54,6 +57,9 @@ importers:
       '@types/react-dom':
         specifier: ^19.1.7
         version: 19.1.7(@types/react@19.1.9)
+      '@workspace/db':
+        specifier: workspace:*
+        version: link:../../packages/db
       '@workspace/eslint-config':
         specifier: workspace:^
         version: link:../../packages/eslint-config
@@ -79,6 +85,12 @@ importers:
       '@types/pg':
         specifier: ^8.15.5
         version: 8.15.5
+      '@workspace/eslint-config':
+        specifier: workspace:*
+        version: link:../eslint-config
+      '@workspace/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript-config
       drizzle-kit:
         specifier: ^0.31.5
         version: 0.31.5
@@ -166,9 +178,6 @@ importers:
       '@turbo/gen':
         specifier: ^2.5.5
         version: 2.5.5(@types/node@20.19.9)(typescript@5.9.2)
-      '@types/minimatch':
-        specifier: ^6.0.0
-        version: 6.0.0
       '@types/node':
         specifier: ^20.19.9
         version: 20.19.9
