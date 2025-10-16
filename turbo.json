@@ -1,9 +1,14 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "ui": "tui",
+  "envMode": "loose",
   "globalEnv": [
-    "DATABASE_URL"
+    "DATABASE_URL",
+    "BETTER_AUTH_SECRET",
+    "BETTER_AUTH_URL",
+    "NODE_ENV"
   ],
+  "globalDependencies": [".env"],
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
@@ -17,6 +22,7 @@
       "dependsOn": ["^check-types"]
     },
     "dev": {
+      "inputs": [".env*"],
       "cache": false,
       "persistent": true
     }
