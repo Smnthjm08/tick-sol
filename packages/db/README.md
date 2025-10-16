@@ -1,4 +1,7 @@
- pnpm run db:generate
- pnpm run db:push
+# drizzle commands
 
- drizzle-kit generate --custom --name=seed-users
+pnpm run db:generate
+
+pnpm run db:push
+
+drizzle-kit generate --custom --name=seed-users

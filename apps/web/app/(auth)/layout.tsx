@@ -1,4 +1,3 @@
-
 export default function AuthLayout({
   children,
 }: Readonly<{
@@ -7,9 +6,8 @@ export default function AuthLayout({
   return (
     <div className="flex items-center justify-center min-h-screen">
       <div className="flex flex-1 flex-col justify-center px-4 py-10 lg:px-6">
-          {children}
-          </div>
-
-</div>
+        {children}
+      </div>
+    </div>
   );
 }

@@ -1,9 +1,7 @@
-
-
 # Drizzle Kit Quick Reference (Execution Order)
 
-
 ## 1. Generate migration files from your Drizzle schema
+
 ```bash
 pnpm drizzle-kit generate
 ```
@@ -43,4 +41,3 @@ pnpm drizzle-kit up
 ```bash
 pnpm drizzle-kit studio
 ```
-

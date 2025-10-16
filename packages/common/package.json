@@ -13,7 +13,8 @@
     "better-auth": "^1.3.27"
   },
   "exports": {
-    "./auth": "./src/auth/index.ts"
+    "./auth": "./src/auth/index.ts",
+    "./auth-client": "./src/auth/client.ts"
   },
   "devDependencies": {
     "@workspace/eslint-config": "workspace:*",

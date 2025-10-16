@@ -10,9 +10,13 @@ export default function Page() {
   return (
     <div className="flex items-center justify-center min-h-svh">
       <div className="flex flex-col items-center justify-center gap-4">
-        <h1 className="text-2xl font-bold">Hello World</h1>
-        <Button size="sm" onClick={()=> router.push("/login")}>Login</Button>
-        <Button size="sm" onClick={()=> router.push("/signup")}>Get Started</Button>
+        <h1 className="text-2xl font-bold">tick sol</h1>
+        <Button size="sm" onClick={() => router.push("/login")}>
+          Login
+        </Button>
+        <Button size="sm" onClick={() => router.push("/signup")}>
+          Get Started
+        </Button>
       </div>
     </div>
   );

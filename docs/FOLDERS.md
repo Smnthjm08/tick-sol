@@ -1,3 +1,5 @@
+# folder structure
+
 apps/web - main app
 
 packages/db - db
