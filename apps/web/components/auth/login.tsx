@@ -4,7 +4,7 @@ import { Button } from "@workspace/ui/components/button";
 import { Input } from "@workspace/ui/components/input";
 import { Label } from "@workspace/ui/components/label";
 import { Separator } from "@workspace/ui/components/separator";
-import { Logo } from "../logo";
+import { Logo } from "../icons/logo";
 import Link from "next/link";
 import { GitHubIcon, GoogleIcon } from "../icons/auth-icons";
 import { authClient } from "@workspace/common/auth-client";
@@ -51,7 +51,7 @@ export default function Login() {
 
   return (
     <div className="sm:mx-auto sm:w-full sm:max-w-md">
-      <Link href="/" className="">
+      <Link href="/">
         <div className="flex items-center space-x-1.5">
           <Logo
             className="h-7 w-7 text-foreground dark:text-foreground"
@@ -165,7 +165,7 @@ export default function Login() {
           className="mt-4 w-full py-2 font-medium"
           disabled={isLoading}
         >
-          {isLoading ? "Signing in..." : "Sign in"}
+          {isLoading ? "Logging in..." : "Login"}
         </Button>
       </form>
       <p className="mt-6 text-sm text-muted-foreground dark:text-muted-foreground">

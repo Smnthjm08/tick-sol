@@ -5,12 +5,13 @@ import { Input } from "@workspace/ui/components/input";
 import { Label } from "@workspace/ui/components/label";
 import { Separator } from "@workspace/ui/components/separator";
 import { useState, FormEvent } from "react";
-import { Logo } from "../logo";
+import { Logo } from "../icons/logo";
 import Link from "next/link";
 import { authClient } from "@workspace/common/auth-client";
 import { useRouter } from "next/navigation";
 import { GitHubIcon, GoogleIcon } from "../icons/auth-icons";
 import { handleSocialLogin } from "@/utils/auth-utils";
+import {toast} from "sonner"
 
 export default function Signup() {
   const router = useRouter();
@@ -37,9 +38,11 @@ export default function Signup() {
         onSuccess: () => {
           // TODO newUserCallbackURL
           router.push("/dashboard");
+          toast.success("SignUp Successful");
         },
         onError: (ctx) => {
-          alert(ctx.error.message);
+          // alert(ctx.error.message);
+          toast.error(ctx.error.message || "Error signing up")
           setIsLoading(false);
         },
       },
@@ -52,7 +55,7 @@ export default function Signup() {
 
   return (
     <div className="sm:mx-auto sm:w-full sm:max-w-md">
-      <Link href="/" className="">
+      <Link href="/">
         <div className="flex items-center space-x-1.5">
           <Logo
             className="h-7 w-7 text-foreground dark:text-foreground"

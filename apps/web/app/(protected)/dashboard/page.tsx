@@ -1,10 +1,21 @@
-import LogoutButton from "@/components/auth/logout";
+import {
+  SidebarInset,
+  SidebarProvider,
+  SidebarTrigger,
+} from "@workspace/ui/components/sidebar";
+import { AppSidebar } from "@/components/sidebar/app-sidebar";
 
-export default function DashboardPage() {
+export default function Sidebar01() {
   return (
-    <main>
-      <div>DashboardPage</div>
-      <LogoutButton />
-    </main>
+    <SidebarProvider>
+      <AppSidebar />
+      <SidebarInset>
+        <header className="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-12">
+          <div className="flex items-center gap-2 px-4">
+            <SidebarTrigger className="sm:hidden" />
+          </div>
+        </header>
+      </SidebarInset>
+    </SidebarProvider>
   );
 }
